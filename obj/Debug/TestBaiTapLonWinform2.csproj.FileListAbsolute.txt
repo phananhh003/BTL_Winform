@@ -1,0 +1,10 @@
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\bin\Debug\TestBaiTapLonWinform2.exe.config
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\bin\Debug\TestBaiTapLonWinform2.exe
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\bin\Debug\TestBaiTapLonWinform2.pdb
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.csproj.AssemblyReference.cache
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.Form1.resources
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.Properties.Resources.resources
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.csproj.GenerateResource.cache
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.csproj.CoreCompileInputs.cache
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.exe
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.pdb
