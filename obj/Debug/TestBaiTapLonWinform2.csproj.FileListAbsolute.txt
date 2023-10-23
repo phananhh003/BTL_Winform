@@ -8,3 +8,4 @@ D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform
 D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.csproj.CoreCompileInputs.cache
 D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.exe
 D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.pdb
+D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.QuangNam.resources

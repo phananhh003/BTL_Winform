@@ -12,6 +12,7 @@ namespace TestBaiTapLonWinform2
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -77,6 +78,23 @@ namespace TestBaiTapLonWinform2
             ExitBtn.Image = Properties.Resources.exit_Ic;
         }
 
-        
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+            Panel panel = tableLayoutPanel1.GetControlFromPosition(1,0) as Panel;
+            panel.Controls.Clear();
+            QuangNam control = new QuangNam() { TopLevel = false, Dock = DockStyle.Fill };
+            panel.Controls.Add(control);
+            control.Show();
+        }
+
+        private void CookBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_ControlAdded(object sender, ControlEventArgs e)
+        {
+            Console.WriteLine("true");
+        }
     }
 }
