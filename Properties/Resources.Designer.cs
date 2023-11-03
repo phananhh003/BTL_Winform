@@ -83,6 +83,16 @@ namespace TestBaiTapLonWinform2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_active_Ic {
+            get {
+                object obj = ResourceManager.GetObject("exit_active_Ic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit_Ic {
             get {
                 object obj = ResourceManager.GetObject("exit_Ic", resourceCulture);
@@ -123,6 +133,16 @@ namespace TestBaiTapLonWinform2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pie_chart_active_Ic {
+            get {
+                object obj = ResourceManager.GetObject("pie_chart_active_Ic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pie_chart_Ic {
             get {
                 object obj = ResourceManager.GetObject("pie_chart_Ic", resourceCulture);
@@ -146,6 +166,16 @@ namespace TestBaiTapLonWinform2.Properties {
         internal static System.Drawing.Bitmap ppl_Ic {
             get {
                 object obj = ResourceManager.GetObject("ppl_Ic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setting_active_Ic {
+            get {
+                object obj = ResourceManager.GetObject("setting_active_Ic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

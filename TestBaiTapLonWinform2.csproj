@@ -81,6 +81,9 @@
     <Compile Include="QuangNam.Designer.cs">
       <DependentUpon>QuangNam.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DucAnh.resx">
+      <DependentUpon>DucAnh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DuyAnh.resx">
       <DependentUpon>DuyAnh.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +148,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie_chart_active_Ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_active_Ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_active_Ic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
