@@ -30,13 +30,12 @@
         {
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.txtTrinhDo = new System.Windows.Forms.ComboBox();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.radioButton2 = new System.Windows.Forms.RadioButton();
 			this.radioButton1 = new System.Windows.Forms.RadioButton();
-			this.txtTrinhDo = new System.Windows.Forms.TextBox();
 			this.txtPhone = new System.Windows.Forms.TextBox();
 			this.txtAddress = new System.Windows.Forms.TextBox();
-			this.txtStudy = new System.Windows.Forms.TextBox();
 			this.txtTen = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
@@ -60,6 +59,7 @@
 			this.btnAdd = new System.Windows.Forms.Button();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dsDauBep = new System.Windows.Forms.DataGridView();
+			this.txtStudy = new System.Windows.Forms.ComboBox();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel4.SuspendLayout();
@@ -88,11 +88,11 @@
 			// 
 			// panel1
 			// 
-			this.panel1.Controls.Add(this.panel4);
+			this.panel1.Controls.Add(this.txtStudy);
 			this.panel1.Controls.Add(this.txtTrinhDo);
+			this.panel1.Controls.Add(this.panel4);
 			this.panel1.Controls.Add(this.txtPhone);
 			this.panel1.Controls.Add(this.txtAddress);
-			this.panel1.Controls.Add(this.txtStudy);
 			this.panel1.Controls.Add(this.txtTen);
 			this.panel1.Controls.Add(this.label8);
 			this.panel1.Controls.Add(this.label7);
@@ -108,6 +108,25 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(527, 627);
 			this.panel1.TabIndex = 0;
+			// 
+			// txtTrinhDo
+			// 
+			this.txtTrinhDo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(29)))), ((int)(((byte)(43)))));
+			this.txtTrinhDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTrinhDo.ForeColor = System.Drawing.Color.White;
+			this.txtTrinhDo.FormattingEnabled = true;
+			this.txtTrinhDo.Items.AddRange(new object[] {
+            "G001",
+            "G002",
+            "K001",
+            "K002",
+            "TB001",
+            "TB002",
+            "Y001"});
+			this.txtTrinhDo.Location = new System.Drawing.Point(178, 236);
+			this.txtTrinhDo.Name = "txtTrinhDo";
+			this.txtTrinhDo.Size = new System.Drawing.Size(332, 28);
+			this.txtTrinhDo.TabIndex = 48;
 			// 
 			// panel4
 			// 
@@ -144,18 +163,6 @@
 			this.radioButton1.Text = "Nam";
 			this.radioButton1.UseVisualStyleBackColor = true;
 			// 
-			// txtTrinhDo
-			// 
-			this.txtTrinhDo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(29)))), ((int)(((byte)(43)))));
-			this.txtTrinhDo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtTrinhDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtTrinhDo.ForeColor = System.Drawing.Color.White;
-			this.txtTrinhDo.Location = new System.Drawing.Point(178, 236);
-			this.txtTrinhDo.Multiline = true;
-			this.txtTrinhDo.Name = "txtTrinhDo";
-			this.txtTrinhDo.Size = new System.Drawing.Size(332, 29);
-			this.txtTrinhDo.TabIndex = 46;
-			// 
 			// txtPhone
 			// 
 			this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(29)))), ((int)(((byte)(43)))));
@@ -167,6 +174,7 @@
 			this.txtPhone.Name = "txtPhone";
 			this.txtPhone.Size = new System.Drawing.Size(332, 32);
 			this.txtPhone.TabIndex = 45;
+			this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
 			// 
 			// txtAddress
 			// 
@@ -179,18 +187,6 @@
 			this.txtAddress.Name = "txtAddress";
 			this.txtAddress.Size = new System.Drawing.Size(332, 29);
 			this.txtAddress.TabIndex = 44;
-			// 
-			// txtStudy
-			// 
-			this.txtStudy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(29)))), ((int)(((byte)(43)))));
-			this.txtStudy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtStudy.ForeColor = System.Drawing.Color.White;
-			this.txtStudy.Location = new System.Drawing.Point(178, 322);
-			this.txtStudy.Multiline = true;
-			this.txtStudy.Name = "txtStudy";
-			this.txtStudy.Size = new System.Drawing.Size(332, 29);
-			this.txtStudy.TabIndex = 43;
 			// 
 			// txtTen
 			// 
@@ -355,6 +351,7 @@
 			this.btnReset.TabIndex = 44;
 			this.btnReset.Text = "Reset";
 			this.btnReset.UseVisualStyleBackColor = true;
+			this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
 			// 
 			// btnUpLoad
 			// 
@@ -370,6 +367,7 @@
 			this.btnUpLoad.TabIndex = 43;
 			this.btnUpLoad.Text = "Image";
 			this.btnUpLoad.UseVisualStyleBackColor = true;
+			this.btnUpLoad.Click += new System.EventHandler(this.btnUpLoad_Click);
 			// 
 			// txtTimKiem
 			// 
@@ -398,6 +396,7 @@
 			this.btnSearch.TabIndex = 41;
 			this.btnSearch.Text = "Tìm kiếm";
 			this.btnSearch.UseVisualStyleBackColor = true;
+			this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
 			// 
 			// pictureBox1
 			// 
@@ -423,6 +422,7 @@
 			this.btnExcel.TabIndex = 39;
 			this.btnExcel.Text = "Excel";
 			this.btnExcel.UseVisualStyleBackColor = true;
+			this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
 			// 
 			// btnDel
 			// 
@@ -437,6 +437,7 @@
 			this.btnDel.TabIndex = 38;
 			this.btnDel.Text = "Xóa";
 			this.btnDel.UseVisualStyleBackColor = false;
+			this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
 			// 
 			// btnRep
 			// 
@@ -451,6 +452,7 @@
 			this.btnRep.TabIndex = 37;
 			this.btnRep.Text = "Sửa";
 			this.btnRep.UseVisualStyleBackColor = true;
+			this.btnRep.Click += new System.EventHandler(this.btnRep_Click);
 			// 
 			// btnAdd
 			// 
@@ -491,6 +493,22 @@
 			this.dsDauBep.TabIndex = 0;
 			this.dsDauBep.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsDauBep_CellClick);
 			// 
+			// txtStudy
+			// 
+			this.txtStudy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(29)))), ((int)(((byte)(43)))));
+			this.txtStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStudy.ForeColor = System.Drawing.Color.White;
+			this.txtStudy.FormattingEnabled = true;
+			this.txtStudy.Items.AddRange(new object[] {
+            "S00",
+            "A00",
+            "B00",
+            "C00"});
+			this.txtStudy.Location = new System.Drawing.Point(178, 323);
+			this.txtStudy.Name = "txtStudy";
+			this.txtStudy.Size = new System.Drawing.Size(332, 28);
+			this.txtStudy.TabIndex = 49;
+			// 
 			// LuongCunt
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -525,10 +543,8 @@
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.RadioButton radioButton2;
 		private System.Windows.Forms.RadioButton radioButton1;
-		private System.Windows.Forms.TextBox txtTrinhDo;
 		private System.Windows.Forms.TextBox txtPhone;
 		private System.Windows.Forms.TextBox txtAddress;
-		private System.Windows.Forms.TextBox txtStudy;
 		public System.Windows.Forms.TextBox txtTen;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label7;
@@ -552,5 +568,7 @@
 		private System.Windows.Forms.Button btnAdd;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.DataGridView dsDauBep;
+		private System.Windows.Forms.ComboBox txtTrinhDo;
+		private System.Windows.Forms.ComboBox txtStudy;
 	}
 }
