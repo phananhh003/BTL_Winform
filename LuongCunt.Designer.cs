@@ -113,9 +113,9 @@
 			// 
 			this.panel4.Controls.Add(this.radioButton2);
 			this.panel4.Controls.Add(this.radioButton1);
-			this.panel4.Location = new System.Drawing.Point(168, 567);
+			this.panel4.Location = new System.Drawing.Point(178, 557);
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(342, 45);
+			this.panel4.Size = new System.Drawing.Size(332, 45);
 			this.panel4.TabIndex = 47;
 			// 
 			// radioButton2
@@ -150,10 +150,10 @@
 			this.txtTrinhDo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtTrinhDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtTrinhDo.ForeColor = System.Drawing.Color.White;
-			this.txtTrinhDo.Location = new System.Drawing.Point(210, 198);
+			this.txtTrinhDo.Location = new System.Drawing.Point(178, 236);
 			this.txtTrinhDo.Multiline = true;
 			this.txtTrinhDo.Name = "txtTrinhDo";
-			this.txtTrinhDo.Size = new System.Drawing.Size(300, 29);
+			this.txtTrinhDo.Size = new System.Drawing.Size(332, 29);
 			this.txtTrinhDo.TabIndex = 46;
 			// 
 			// txtPhone
@@ -162,10 +162,10 @@
 			this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtPhone.ForeColor = System.Drawing.Color.White;
-			this.txtPhone.Location = new System.Drawing.Point(210, 485);
+			this.txtPhone.Location = new System.Drawing.Point(178, 485);
 			this.txtPhone.Multiline = true;
 			this.txtPhone.Name = "txtPhone";
-			this.txtPhone.Size = new System.Drawing.Size(300, 32);
+			this.txtPhone.Size = new System.Drawing.Size(332, 32);
 			this.txtPhone.TabIndex = 45;
 			// 
 			// txtAddress
@@ -174,10 +174,10 @@
 			this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtAddress.ForeColor = System.Drawing.Color.White;
-			this.txtAddress.Location = new System.Drawing.Point(210, 404);
+			this.txtAddress.Location = new System.Drawing.Point(178, 404);
 			this.txtAddress.Multiline = true;
 			this.txtAddress.Name = "txtAddress";
-			this.txtAddress.Size = new System.Drawing.Size(300, 29);
+			this.txtAddress.Size = new System.Drawing.Size(332, 29);
 			this.txtAddress.TabIndex = 44;
 			// 
 			// txtStudy
@@ -186,10 +186,10 @@
 			this.txtStudy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtStudy.ForeColor = System.Drawing.Color.White;
-			this.txtStudy.Location = new System.Drawing.Point(210, 258);
+			this.txtStudy.Location = new System.Drawing.Point(178, 322);
 			this.txtStudy.Multiline = true;
 			this.txtStudy.Name = "txtStudy";
-			this.txtStudy.Size = new System.Drawing.Size(300, 29);
+			this.txtStudy.Size = new System.Drawing.Size(332, 29);
 			this.txtStudy.TabIndex = 43;
 			// 
 			// txtTen
@@ -198,10 +198,10 @@
 			this.txtTen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtTen.ForeColor = System.Drawing.Color.White;
-			this.txtTen.Location = new System.Drawing.Point(210, 136);
+			this.txtTen.Location = new System.Drawing.Point(178, 155);
 			this.txtTen.Multiline = true;
 			this.txtTen.Name = "txtTen";
-			this.txtTen.Size = new System.Drawing.Size(300, 29);
+			this.txtTen.Size = new System.Drawing.Size(332, 29);
 			this.txtTen.TabIndex = 42;
 			// 
 			// label8
@@ -242,7 +242,7 @@
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label5.ForeColor = System.Drawing.Color.White;
-			this.label5.Location = new System.Drawing.Point(12, 259);
+			this.label5.Location = new System.Drawing.Point(12, 323);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(136, 29);
 			this.label5.TabIndex = 38;
@@ -253,7 +253,7 @@
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.ForeColor = System.Drawing.Color.White;
-			this.label4.Location = new System.Drawing.Point(12, 198);
+			this.label4.Location = new System.Drawing.Point(12, 236);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(132, 29);
 			this.label4.TabIndex = 37;
@@ -264,7 +264,7 @@
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.Color.White;
-			this.label3.Location = new System.Drawing.Point(12, 136);
+			this.label3.Location = new System.Drawing.Point(12, 155);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(129, 29);
 			this.label3.TabIndex = 36;
@@ -276,10 +276,10 @@
 			this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtMaNV.ForeColor = System.Drawing.Color.White;
-			this.txtMaNV.Location = new System.Drawing.Point(210, 77);
+			this.txtMaNV.Location = new System.Drawing.Point(178, 77);
 			this.txtMaNV.Multiline = true;
 			this.txtMaNV.Name = "txtMaNV";
-			this.txtMaNV.Size = new System.Drawing.Size(300, 29);
+			this.txtMaNV.Size = new System.Drawing.Size(332, 29);
 			this.txtMaNV.TabIndex = 35;
 			// 
 			// label2

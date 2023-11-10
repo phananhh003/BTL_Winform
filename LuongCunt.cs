@@ -124,5 +124,7 @@ namespace TestBaiTapLonWinform2
 				MessageBox.Show("Không tìm thấy ảnh");
 			}
 		}
+
+		
 	}
 }
