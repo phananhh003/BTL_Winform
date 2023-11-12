@@ -353,8 +353,6 @@
 			// 
 			// Filter
 			// 
-			this.Filter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
 			this.Filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
 			this.Filter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Filter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -405,8 +403,6 @@
 			// 
 			// txtTimKiem
 			// 
-			this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
 			this.txtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(29)))), ((int)(((byte)(43)))));
 			this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -419,7 +415,6 @@
 			// 
 			// btnSearch
 			// 
-			this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
 			this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
