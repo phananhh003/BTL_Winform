@@ -28,7 +28,8 @@ namespace TestBaiTapLonWinform2
 		public LuongCunt()
         {
             InitializeComponent();
-        }
+			Filter.Text = "Filter";
+		}
 		void LoadData()
 		{
 			command = connection.CreateCommand();
@@ -353,7 +354,56 @@ namespace TestBaiTapLonWinform2
 		}
 		private void btnSearch_Click(object sender, EventArgs e)
 		{
-			loadDataSearch();
+			string fil = " ";
+			if(Filter.SelectedIndex == -1)
+			{
+				MessageBox.Show("Chung");
+
+				loadDataSearch();
+			}
+			else
+			{
+				fil = Filter.SelectedItem.ToString();
+				if(fil == "Tên")
+				{
+					using (SqlCommand cmd = new SqlCommand("SELECT * FROM DauBep WHERE TenDauBep = @TimKiem", connection))
+					{
+						cmd.Parameters.AddWithValue("@TimKiem", txtTimKiem.Text);
+
+						dt.Clear();
+						adapter.SelectCommand = cmd;
+						adapter.Fill(dt);
+						dsDauBep.DataSource = dt;
+						isSearching = true;
+					}
+				}
+				else if(fil == "Nơi Học")
+				{
+					using (SqlCommand cmd = new SqlCommand("SELECT * FROM DauBep WHERE TenNoiHoc = @TimKiem", connection))
+					{
+						cmd.Parameters.AddWithValue("@TimKiem", txtTimKiem.Text);
+
+						dt.Clear();
+						adapter.SelectCommand = cmd;
+						adapter.Fill(dt);
+						dsDauBep.DataSource = dt;
+						isSearching = true;
+					}
+				}
+				else
+				{
+					using (SqlCommand cmd = new SqlCommand("SELECT * FROM DauBep WHERE TenTrinhDo = @TimKiem", connection))
+					{
+						cmd.Parameters.AddWithValue("@TimKiem", txtTimKiem.Text);
+
+						dt.Clear();
+						adapter.SelectCommand = cmd;
+						adapter.Fill(dt);
+						dsDauBep.DataSource = dt;
+						isSearching = true;
+					}
+				}
+			}
 		}
 
 		private void btnExcel_Click(object sender, EventArgs e)
@@ -426,6 +476,22 @@ namespace TestBaiTapLonWinform2
 				MessageBox.Show("Lưu file thành công");
 			}
 			exApp.Quit();
+		}
+
+		private void Filter_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (Filter.SelectedIndex >= 0)
+			{
+				if (label9 != null && label9.Parent != null)
+				{
+					label9.Parent.Controls.Remove(label9);
+				}
+			}
+			else
+			{
+				label9.Text = "Filter";
+				label9.Parent.Controls.Add(label9);
+			}
 		}
 	}
 }

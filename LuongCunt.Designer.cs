@@ -48,6 +48,7 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.label9 = new System.Windows.Forms.Label();
 			this.Filter = new System.Windows.Forms.ComboBox();
 			this.btnReset = new System.Windows.Forms.Button();
 			this.btnUpLoad = new System.Windows.Forms.Button();
@@ -320,6 +321,7 @@
 			// 
 			// panel2
 			// 
+			this.panel2.Controls.Add(this.label9);
 			this.panel2.Controls.Add(this.Filter);
 			this.panel2.Controls.Add(this.btnReset);
 			this.panel2.Controls.Add(this.btnUpLoad);
@@ -336,6 +338,19 @@
 			this.panel2.Size = new System.Drawing.Size(743, 627);
 			this.panel2.TabIndex = 1;
 			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+			this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.ForeColor = System.Drawing.Color.White;
+			this.label9.Location = new System.Drawing.Point(514, 31);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(56, 22);
+			this.label9.TabIndex = 46;
+			this.label9.Text = "Filter";
+			// 
 			// Filter
 			// 
 			this.Filter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -343,17 +358,18 @@
 			this.Filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
 			this.Filter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.Filter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Filter.ForeColor = System.Drawing.Color.White;
 			this.Filter.FormattingEnabled = true;
 			this.Filter.Items.AddRange(new object[] {
             "Tên",
             "Nơi Học",
             "Trình Độ"});
-			this.Filter.Location = new System.Drawing.Point(508, 25);
+			this.Filter.Location = new System.Drawing.Point(508, 27);
 			this.Filter.Name = "Filter";
-			this.Filter.Size = new System.Drawing.Size(120, 28);
+			this.Filter.Size = new System.Drawing.Size(120, 30);
 			this.Filter.TabIndex = 45;
+			this.Filter.SelectedIndexChanged += new System.EventHandler(this.Filter_SelectedIndexChanged);
 			// 
 			// btnReset
 			// 
@@ -410,7 +426,7 @@
 			this.btnSearch.ForeColor = System.Drawing.Color.White;
 			this.btnSearch.Location = new System.Drawing.Point(634, 25);
 			this.btnSearch.Name = "btnSearch";
-			this.btnSearch.Size = new System.Drawing.Size(95, 29);
+			this.btnSearch.Size = new System.Drawing.Size(95, 32);
 			this.btnSearch.TabIndex = 41;
 			this.btnSearch.Text = "Tìm kiếm";
 			this.btnSearch.UseVisualStyleBackColor = true;
@@ -572,5 +588,6 @@
 		private System.Windows.Forms.DataGridView dsDauBep;
 		private System.Windows.Forms.ComboBox txtTrinhDo;
 		private System.Windows.Forms.ComboBox txtStudy;
+		private System.Windows.Forms.Label label9;
 	}
 }
