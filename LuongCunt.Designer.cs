@@ -30,6 +30,7 @@
         {
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.txtStudy = new System.Windows.Forms.ComboBox();
 			this.txtTrinhDo = new System.Windows.Forms.ComboBox();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -59,7 +60,6 @@
 			this.btnAdd = new System.Windows.Forms.Button();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dsDauBep = new System.Windows.Forms.DataGridView();
-			this.txtStudy = new System.Windows.Forms.ComboBox();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel4.SuspendLayout();
@@ -109,20 +109,38 @@
 			this.panel1.Size = new System.Drawing.Size(527, 627);
 			this.panel1.TabIndex = 0;
 			// 
+			// txtStudy
+			// 
+			this.txtStudy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(29)))), ((int)(((byte)(43)))));
+			this.txtStudy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.txtStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtStudy.ForeColor = System.Drawing.Color.White;
+			this.txtStudy.FormattingEnabled = true;
+			this.txtStudy.Items.AddRange(new object[] {
+            "Trường S",
+            "Trường A",
+            "Trường B",
+            "Cao Đẳng C"});
+			this.txtStudy.Location = new System.Drawing.Point(178, 323);
+			this.txtStudy.Name = "txtStudy";
+			this.txtStudy.Size = new System.Drawing.Size(332, 28);
+			this.txtStudy.TabIndex = 49;
+			// 
 			// txtTrinhDo
 			// 
 			this.txtTrinhDo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(29)))), ((int)(((byte)(43)))));
+			this.txtTrinhDo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.txtTrinhDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtTrinhDo.ForeColor = System.Drawing.Color.White;
 			this.txtTrinhDo.FormattingEnabled = true;
 			this.txtTrinhDo.Items.AddRange(new object[] {
-            "G001",
-            "G002",
-            "K001",
-            "K002",
-            "TB001",
-            "TB002",
-            "Y001"});
+            "Xuất Sắc",
+            "Giỏi",
+            "Khá",
+            "TB-Khá",
+            "Trung Bình",
+            "Học viên",
+            "Thử việc"});
 			this.txtTrinhDo.Location = new System.Drawing.Point(178, 236);
 			this.txtTrinhDo.Name = "txtTrinhDo";
 			this.txtTrinhDo.Size = new System.Drawing.Size(332, 28);
@@ -240,9 +258,9 @@
 			this.label5.ForeColor = System.Drawing.Color.White;
 			this.label5.Location = new System.Drawing.Point(12, 323);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(136, 29);
+			this.label5.Size = new System.Drawing.Size(140, 29);
 			this.label5.TabIndex = 38;
-			this.label5.Text = "Mã nơi học:";
+			this.label5.Text = "Tên nơi học";
 			// 
 			// label4
 			// 
@@ -251,9 +269,9 @@
 			this.label4.ForeColor = System.Drawing.Color.White;
 			this.label4.Location = new System.Drawing.Point(12, 236);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(132, 29);
+			this.label4.Size = new System.Drawing.Size(142, 29);
 			this.label4.TabIndex = 37;
-			this.label4.Text = "Mã trình độ";
+			this.label4.Text = "Tên trình độ";
 			// 
 			// label3
 			// 
@@ -377,10 +395,10 @@
 			this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtTimKiem.ForeColor = System.Drawing.Color.White;
-			this.txtTimKiem.Location = new System.Drawing.Point(14, 27);
+			this.txtTimKiem.Location = new System.Drawing.Point(18, 27);
 			this.txtTimKiem.Multiline = true;
 			this.txtTimKiem.Name = "txtTimKiem";
-			this.txtTimKiem.Size = new System.Drawing.Size(488, 27);
+			this.txtTimKiem.Size = new System.Drawing.Size(484, 27);
 			this.txtTimKiem.TabIndex = 42;
 			// 
 			// btnSearch
@@ -492,22 +510,6 @@
 			this.dsDauBep.Size = new System.Drawing.Size(1276, 338);
 			this.dsDauBep.TabIndex = 0;
 			this.dsDauBep.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsDauBep_CellClick);
-			// 
-			// txtStudy
-			// 
-			this.txtStudy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(29)))), ((int)(((byte)(43)))));
-			this.txtStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtStudy.ForeColor = System.Drawing.Color.White;
-			this.txtStudy.FormattingEnabled = true;
-			this.txtStudy.Items.AddRange(new object[] {
-            "S00",
-            "A00",
-            "B00",
-            "C00"});
-			this.txtStudy.Location = new System.Drawing.Point(178, 323);
-			this.txtStudy.Name = "txtStudy";
-			this.txtStudy.Size = new System.Drawing.Size(332, 28);
-			this.txtStudy.TabIndex = 49;
 			// 
 			// LuongCunt
 			// 
