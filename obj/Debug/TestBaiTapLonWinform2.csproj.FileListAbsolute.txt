@@ -26,3 +26,17 @@ D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL_Winform\obj\Debug\TestBaiTapLonWi
 D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.csproj.CoreCompileInputs.cache
 D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.exe
 D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.pdb
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\bin\Debug\TestBaiTapLonWinform2.exe.config
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\bin\Debug\TestBaiTapLonWinform2.exe
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\bin\Debug\TestBaiTapLonWinform2.pdb
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.csproj.AssemblyReference.cache
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.DucAnh.resources
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.DuyAnh.resources
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.Form1.resources
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.LuongCunt.resources
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.Properties.Resources.resources
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.QuangNam.resources
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.csproj.GenerateResource.cache
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.csproj.CoreCompileInputs.cache
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.exe
+D:\UTC\nam 3\lap trinh C#\Bài tập lớn\BTL\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.pdb
