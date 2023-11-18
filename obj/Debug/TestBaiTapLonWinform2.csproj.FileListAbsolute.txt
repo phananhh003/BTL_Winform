@@ -12,3 +12,17 @@ D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform
 D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.DuyAnh.resources
 D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.LuongCunt.resources
 D:\LTrinhTrucQuan\WorkSpace\TestBaiTapLonWinform2\obj\Debug\TestBaiTapLonWinform2.DucAnh.resources
+D:\winform project\BTL_Winform\bin\Debug\TestBaiTapLonWinform2.exe.config
+D:\winform project\BTL_Winform\bin\Debug\TestBaiTapLonWinform2.exe
+D:\winform project\BTL_Winform\bin\Debug\TestBaiTapLonWinform2.pdb
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.csproj.AssemblyReference.cache
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.DucAnh.resources
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.DuyAnh.resources
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.Form1.resources
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.LuongCunt.resources
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.Properties.Resources.resources
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.QuangNam.resources
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.csproj.GenerateResource.cache
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.csproj.CoreCompileInputs.cache
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.exe
+D:\winform project\BTL_Winform\obj\Debug\TestBaiTapLonWinform2.pdb
