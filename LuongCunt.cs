@@ -369,7 +369,7 @@ namespace TestBaiTapLonWinform2
 		void loadDataSearch()
 		{
 			string timKiem = txtTimKiem.Text;
-			string cmd = "SELECT * FROM DauBep WHERE TenDauBep = @TimKiem OR TenNoiHoc = @TimKiem OR TenTrinhDo = @TimKiem";
+			string cmd = "SELECT MaDauBep, TenDauBep, MaTrinhDo, MaNoiHoc, DiaChi, Gender, DienThoai, TenNoiHoc, TenTrinhDo, imageFile FROM DauBep WHERE TenDauBep = @TimKiem OR TenNoiHoc = @TimKiem OR TenTrinhDo = @TimKiem";
 			command = connection.CreateCommand();
 			command.CommandText = cmd;
 			command.Parameters.AddWithValue("@TimKiem", timKiem);
@@ -385,7 +385,6 @@ namespace TestBaiTapLonWinform2
 			string fil = " ";
 			if (Filter.SelectedIndex == -1)
 			{
-				MessageBox.Show("Chung");
 
 				loadDataSearch();
 			}
@@ -394,7 +393,7 @@ namespace TestBaiTapLonWinform2
 				fil = Filter.SelectedItem.ToString();
 				if (fil == "Tên")
 				{
-					using (SqlCommand cmd = new SqlCommand("SELECT * FROM DauBep WHERE TenDauBep = @TimKiem", connection))
+					using (SqlCommand cmd = new SqlCommand("SELECT MaDauBep, TenDauBep, MaTrinhDo, MaNoiHoc, DiaChi, Gender, DienThoai, TenNoiHoc, TenTrinhDo, imageFile FROM DauBep WHERE TenDauBep = @TimKiem", connection))
 					{
 						cmd.Parameters.AddWithValue("@TimKiem", txtTimKiem.Text);
 
@@ -407,7 +406,7 @@ namespace TestBaiTapLonWinform2
 				}
 				else if (fil == "Nơi Học")
 				{
-					using (SqlCommand cmd = new SqlCommand("SELECT * FROM DauBep WHERE TenNoiHoc = @TimKiem", connection))
+					using (SqlCommand cmd = new SqlCommand("SELECT MaDauBep, TenDauBep, MaTrinhDo, MaNoiHoc, DiaChi, Gender, DienThoai, TenNoiHoc, TenTrinhDo, imageFile FROM DauBep WHERE TenNoiHoc = @TimKiem", connection))
 					{
 						cmd.Parameters.AddWithValue("@TimKiem", txtTimKiem.Text);
 
@@ -420,7 +419,7 @@ namespace TestBaiTapLonWinform2
 				}
 				else
 				{
-					using (SqlCommand cmd = new SqlCommand("SELECT * FROM DauBep WHERE TenTrinhDo = @TimKiem", connection))
+					using (SqlCommand cmd = new SqlCommand("SELECT MaDauBep, TenDauBep, MaTrinhDo, MaNoiHoc, DiaChi, Gender, DienThoai, TenNoiHoc, TenTrinhDo, imageFile FROM DauBep WHERE TenTrinhDo = @TimKiem", connection))
 					{
 						cmd.Parameters.AddWithValue("@TimKiem", txtTimKiem.Text);
 
