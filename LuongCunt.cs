@@ -14,27 +14,27 @@ using System.Diagnostics.Eventing.Reader;
 
 namespace TestBaiTapLonWinform2
 {
-    public partial class LuongCunt : Form
-    {
+	public partial class LuongCunt : Form
+	{
 		bool isSearching = false;
 		SqlConnection connection;
 		SqlCommand command;
-		string str = "Data Source=MYLAPTOP\\SQLEXPRESS;Initial Catalog=QlDauBep;Integrated Security=True";
+		string str = "Data Source=MYLAPTOP\\SQLEXPRESS;Initial Catalog=CSDL;Integrated Security=True";
 		DataTable dt = new DataTable();
 		DataTable original = new DataTable(); // Biến tạm để lưu trữ cơ sở dữ liệu cũ
 		SqlDataAdapter adapter = new SqlDataAdapter();
 		string imgLocation = Path.Combine(Directory.GetCurrentDirectory(), "noImages.jpg");
-		
+
 		public LuongCunt()
-        {
-            InitializeComponent();
+		{
+			InitializeComponent();
 			Filter.Text = "Filter";
 		}
 		void LoadData()
 		{
 			command = connection.CreateCommand();
-			command.CommandText = "Select * from DauBep";
-			using (SqlDataReader reader = command.ExecuteReader())
+			command.CommandText = "select MaDauBep, TenDauBep, MaTrinhDo, MaNoiHoc, DiaChi, Gender, DienThoai, TenNoiHoc, TenTrinhDo, imageFile from DauBep";
+            using (SqlDataReader reader = command.ExecuteReader())
 			{
 				if (reader.Read())
 				{
@@ -58,7 +58,7 @@ namespace TestBaiTapLonWinform2
 
 		private void LuongCunt_Load(object sender, EventArgs e)
 		{
-			dsDauBep.ReadOnly = true;
+            dsDauBep.ReadOnly = true;
 			connection = new SqlConnection(str);
 			connection.Open();
 			LoadData();
@@ -95,13 +95,13 @@ namespace TestBaiTapLonWinform2
 			{
 				maTrinhDo = txtTrinhDo.SelectedItem.ToString();
 			}
-			if (maTrinhDo == "Xuất Sắc") return  "G001";
-			else if (maTrinhDo == "Giỏi") return  "G002";
-			else if (maTrinhDo == "Khá") return  "K001";
-			else if (maTrinhDo == "TB-Khá") return  "K002";
-			else if (maTrinhDo == "Trung Bình") return  "TB001";
-			else if (maTrinhDo == "Học viên") return  "TB002";
-			else return  "Y001";
+			if (maTrinhDo == "Xuất Sắc") return "G001";
+			else if (maTrinhDo == "Giỏi") return "G002";
+			else if (maTrinhDo == "Khá") return "K001";
+			else if (maTrinhDo == "TB-Khá") return "K002";
+			else if (maTrinhDo == "Trung Bình") return "TB001";
+			else if (maTrinhDo == "Học viên") return "TB002";
+			else return "Y001";
 
 		}
 		String XuatMaNoiHoc()
@@ -116,16 +116,26 @@ namespace TestBaiTapLonWinform2
 			{
 				noiHoc = txtStudy.SelectedItem.ToString();
 			}
-			if (noiHoc == "Trường S") return  "S00";
-			else if (noiHoc == "Trường A") return  "A00";
-			else if (noiHoc == "Trường B") return  "B00";
-			else return  "C00";
+			if (noiHoc == "Trường S") return "S00";
+			else if (noiHoc == "Trường A") return "A00";
+			else if (noiHoc == "Trường B") return "B00";
+			else return "C00";
 		}
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			string maTrinhDo = XuatMaTrinhDo();
 			string maNoiHoc = XuatMaNoiHoc();
 			string gender = ShowResultRadio();
+			int gt;
+			if (gender == "Nam")
+			{
+				gt = 0;
+			}
+			else
+			{
+				gt = 1;
+			}
+
 			if (string.IsNullOrEmpty(txtMaNV.Text) || string.IsNullOrEmpty(txtTen.Text) || string.IsNullOrEmpty(txtTrinhDo.Text) || string.IsNullOrEmpty(txtStudy.Text) || string.IsNullOrEmpty(txtAddress.Text) || string.IsNullOrEmpty(gender) || string.IsNullOrEmpty(txtPhone.Text))
 			{
 				MessageBox.Show("Vui lòng nhập đầy đủ thông tin.");
@@ -133,7 +143,7 @@ namespace TestBaiTapLonWinform2
 			else
 			{
 				command = connection.CreateCommand();
-				command.CommandText = "insert DauBep(MaDauBep, TenDauBep,MaTrinhDo,MaNoiHoc,DiaChia,GioiTinh,DienThoai, imageFile)  values('" + txtMaNV.Text + "', N'" + txtTen.Text + "', N'" + maTrinhDo + "', N'" + maNoiHoc + "', N'" + txtAddress.Text + "',N'" + gender + "', '" + txtPhone.Text + "', N'" + imgLocation + "')\r\n";
+				command.CommandText = "insert DauBep(MaDauBep, TenDauBep,MaTrinhDo,MaNoiHoc,DiaChi,GioiTinh,DienThoai, imageFile)  values('" + txtMaNV.Text + "', N'" + txtTen.Text + "', N'" + maTrinhDo + "', N'" + maNoiHoc + "', N'" + txtAddress.Text + "','" + gt + "', '" + txtPhone.Text + "', N'" + imgLocation + "')\r\n";
 				command.ExecuteNonQuery();
 				LoadData();
 			}
@@ -160,9 +170,9 @@ namespace TestBaiTapLonWinform2
 			else if (maTrinhDo == "TB002") txtTrinhDo.Text = "Học Viên";
 			else txtTrinhDo.Text = "Thử việc";
 
-			if (maNoiHoc == "S00") txtStudy.Text= "Trường S";
+			if (maNoiHoc == "S00") txtStudy.Text = "Trường S";
 			else if (maNoiHoc == "A00") txtStudy.Text = "Trường A";
-			else if (maNoiHoc == "B00") txtStudy.Text ="Trường B";
+			else if (maNoiHoc == "B00") txtStudy.Text = "Trường B";
 			else txtStudy.Text = "Cao Đẳng C";
 
 			txtAddress.Text = dsDauBep.Rows[i].Cells[4].Value.ToString();
@@ -171,7 +181,7 @@ namespace TestBaiTapLonWinform2
 			{
 				radioButton1.Checked = true;
 			}
-			else if (gender == radioButton2.Text) { radioButton2.Checked = true; }
+			else if(gender == radioButton2.Text) { radioButton2.Checked = true; }
 			txtPhone.Text = dsDauBep.Rows[i].Cells[6].Value.ToString();
 			imgPath = dsDauBep.Rows[i].Cells[9].Value.ToString();
 			if (File.Exists(imgPath))
@@ -184,7 +194,6 @@ namespace TestBaiTapLonWinform2
 				MessageBox.Show("Không tìm thấy ảnh");
 			}
 		}
-
 		private void btnRep_Click(object sender, EventArgs e)
 		{
 			string gender = ShowResultRadio();
@@ -192,9 +201,9 @@ namespace TestBaiTapLonWinform2
 			string trinhDoTemp, noiHocTemp;
 			int i = dsDauBep.CurrentRow.Index;
 			tenCopy = dsDauBep.Rows[i].Cells[1].Value.ToString();
-			TDCopy =  dsDauBep.Rows[i].Cells[2].Value.ToString();
+			TDCopy = dsDauBep.Rows[i].Cells[2].Value.ToString();
 			NHCopy = dsDauBep.Rows[i].Cells[3].Value.ToString();
-			
+
 			if (TDCopy == "G001") trinhDoTemp = "Xuất Sắc";
 			else if (TDCopy == "G002") trinhDoTemp = "Giỏi";
 			else if (TDCopy == "K001") trinhDoTemp = "Khá";
@@ -207,16 +216,17 @@ namespace TestBaiTapLonWinform2
 			else if (NHCopy == "A00") noiHocTemp = "Trường A";
 			else if (NHCopy == "B00") noiHocTemp = "Trường B";
 			else noiHocTemp = "Cao Đẳng C";
-			
+
 			DiaChiCopy = dsDauBep.Rows[i].Cells[4].Value.ToString();
 			GenderCop = dsDauBep.Rows[i].Cells[5].Value.ToString();
-			if (GenderCop == radioButton1.Text)
-			{
-				radioButton1.Checked = true;
-			}
-			else if (GenderCop == radioButton2.Text) { radioButton2.Checked = true; }
+            if (GenderCop == radioButton1.Text)
+            {
+                radioButton1.Checked = true;
+            }
+            else { radioButton2.Checked = true; }
 			PhoneCop = dsDauBep.Rows[i].Cells[6].Value.ToString();
 			imgLocateCop = dsDauBep.Rows[i].Cells[9].Value.ToString();
+
 			if (File.Exists(imgLocateCop))
 			{
 				pictureBox1.Image = Image.FromFile(imgLocateCop);
@@ -227,13 +237,15 @@ namespace TestBaiTapLonWinform2
 				MessageBox.Show("Không tìm thấy ảnh");
 			}
 			//Kiểm tra điều kiện
-			if(tenCopy == txtTen.Text && trinhDoTemp == txtTrinhDo.Text && noiHocTemp == txtStudy.Text && DiaChiCopy == txtAddress.Text && GenderCop == gender && PhoneCop == txtPhone.Text && imgLocateCop == imgLocation)
+			if (tenCopy == txtTen.Text && trinhDoTemp == txtTrinhDo.Text && noiHocTemp == txtStudy.Text && DiaChiCopy == txtAddress.Text && GenderCop == gender && PhoneCop == txtPhone.Text && imgLocateCop == imgLocation)
 			{
+				MessageBox.Show("Bạn Không sửa gì");
 				txtTen.Text = tenCopy;
 				txtTrinhDo.Text = trinhDoTemp;
 				txtStudy.Text = noiHocTemp;
 				txtAddress.Text = DiaChiCopy;
 				txtPhone.Text = PhoneCop;
+
 				if (GenderCop == radioButton1.Text)
 				{
 					radioButton1.Checked = true;
@@ -245,38 +257,54 @@ namespace TestBaiTapLonWinform2
 					pictureBox1.Image = Image.FromFile(imgLocation);
 
 				}
+                MessageBox.Show(imgLocation);
+                imgLocation = dsDauBep.Rows[i].Cells[9].Value.ToString();
 			}
 			else
 			{
-				using (SqlCommand command = new SqlCommand("UPDATE DauBep SET TenDauBep = @Ten, MaTrinhDo = @TrinhDo, MaNoiHoc = @Study, DiaChia = @DiaChi, GioiTinh =@Gender ,DienThoai = @Phone, imageFile = @img WHERE MaDauBep = @MaNV", connection))
+				MessageBox.Show("Có sửa 1 vài thành phần");
+				MessageBox.Show(imgLocateCop);
+				if(imgLocation == imgLocateCop)
 				{
-					command.Parameters.AddWithValue("@Ten", txtTen.Text);
-					
-					if (txtTrinhDo.Text == "Xuất Sắc") command.Parameters.AddWithValue("@TrinhDo", "G001");
-					else if(txtTrinhDo.Text == "Giỏi") command.Parameters.AddWithValue("@TrinhDo", "G002");
-					else if(txtTrinhDo.Text == "Khá") command.Parameters.AddWithValue("@TrinhDo", "K001");
-					else if(txtTrinhDo.Text == "TB-Khá") command.Parameters.AddWithValue("@TrinhDo", "K002");
-					else if(txtTrinhDo.Text == "Trung Bình") command.Parameters.AddWithValue("@TrinhDo", "TB001");
-					else if(txtTrinhDo.Text == "Học viên") command.Parameters.AddWithValue("@TrinhDo", "TB002");
-					else command.Parameters.AddWithValue("@TrinhDo", "Y001");
-
-					if (txtStudy.Text == "Trường S") command.Parameters.AddWithValue("@Study", "S00");
-					else if (txtStudy.Text == "Trường A") command.Parameters.AddWithValue("@Study", "A00");
-					else if (txtStudy.Text == "Trường B") command.Parameters.AddWithValue("@Study", "B00");
-					else command.Parameters.AddWithValue("@Study", "C00");
-
-					command.Parameters.AddWithValue("@DiaChi",txtAddress.Text);
-					command.Parameters.AddWithValue("@Gender",	gender);
-					command.Parameters.AddWithValue("@Phone", txtPhone.Text);
-					command.Parameters.AddWithValue("@img", imgLocation);
-
-					command.Parameters.AddWithValue("@MaNV", txtMaNV.Text);
-
-					command.ExecuteNonQuery();
-					LoadData();
+					MessageBox.Show("Không sửa gì");
+                    imgLocation = dsDauBep.Rows[i].Cells[9].Value.ToString();
 				}
+                using (SqlCommand command = new SqlCommand("UPDATE DauBep SET TenDauBep = @Ten, MaTrinhDo = @TrinhDo, MaNoiHoc = @Study, DiaChi = @DiaChi, GioiTinh =@Gender ,DienThoai = @Phone, imageFile = @img WHERE MaDauBep = @MaNV", connection))
+                    {
+                        command.Parameters.AddWithValue("@Ten", txtTen.Text);
+
+                        if (txtTrinhDo.Text == "Xuất Sắc") command.Parameters.AddWithValue("@TrinhDo", "G001");
+                        else if (txtTrinhDo.Text == "Giỏi") command.Parameters.AddWithValue("@TrinhDo", "G002");
+                        else if (txtTrinhDo.Text == "Khá") command.Parameters.AddWithValue("@TrinhDo", "K001");
+                        else if (txtTrinhDo.Text == "TB-Khá") command.Parameters.AddWithValue("@TrinhDo", "K002");
+                        else if (txtTrinhDo.Text == "Trung Bình") command.Parameters.AddWithValue("@TrinhDo", "TB001");
+                        else if (txtTrinhDo.Text == "Học viên") command.Parameters.AddWithValue("@TrinhDo", "TB002");
+                        else command.Parameters.AddWithValue("@TrinhDo", "Y001");
+
+                        if (txtStudy.Text == "Trường S") command.Parameters.AddWithValue("@Study", "S00");
+                        else if (txtStudy.Text == "Trường A") command.Parameters.AddWithValue("@Study", "A00");
+                        else if (txtStudy.Text == "Trường B") command.Parameters.AddWithValue("@Study", "B00");
+                        else command.Parameters.AddWithValue("@Study", "C00");
+
+                        command.Parameters.AddWithValue("@DiaChi", txtAddress.Text);
+                        if (gender.Equals("nam", StringComparison.OrdinalIgnoreCase))
+                        {
+                            command.Parameters.AddWithValue("@Gender", 0);
+                        }
+                        else
+                        {
+                            command.Parameters.AddWithValue("@Gender", 1);
+                        }
+                        command.Parameters.AddWithValue("@Phone", txtPhone.Text);
+                        command.Parameters.AddWithValue("@img", imgLocation);
+
+                        command.Parameters.AddWithValue("@MaNV", txtMaNV.Text);
+
+                        command.ExecuteNonQuery();
+                        LoadData();
+                    }
 			}
-			
+
 		}
 
 		private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
@@ -355,7 +383,7 @@ namespace TestBaiTapLonWinform2
 		private void btnSearch_Click(object sender, EventArgs e)
 		{
 			string fil = " ";
-			if(Filter.SelectedIndex == -1)
+			if (Filter.SelectedIndex == -1)
 			{
 				MessageBox.Show("Chung");
 
@@ -364,7 +392,7 @@ namespace TestBaiTapLonWinform2
 			else
 			{
 				fil = Filter.SelectedItem.ToString();
-				if(fil == "Tên")
+				if (fil == "Tên")
 				{
 					using (SqlCommand cmd = new SqlCommand("SELECT * FROM DauBep WHERE TenDauBep = @TimKiem", connection))
 					{
@@ -377,7 +405,7 @@ namespace TestBaiTapLonWinform2
 						isSearching = true;
 					}
 				}
-				else if(fil == "Nơi Học")
+				else if (fil == "Nơi Học")
 				{
 					using (SqlCommand cmd = new SqlCommand("SELECT * FROM DauBep WHERE TenNoiHoc = @TimKiem", connection))
 					{
@@ -443,10 +471,10 @@ namespace TestBaiTapLonWinform2
 				exSheet.Range["A" + (dong + i).ToString()].Value = (i + 1).ToString();
 				exSheet.Range["B" + (dong + i).ToString()].Value = dsDauBep.Rows[i].Cells[0].Value.ToString();
 				exSheet.Range["C" + (dong + i).ToString()].Value = dsDauBep.Rows[i].Cells[1].Value.ToString();
-				
+
 				string maTrinhDo = dsDauBep.Rows[i].Cells[2].Value.ToString();
 				string maNoiHoc = dsDauBep.Rows[i].Cells[3].Value.ToString();
-				
+
 				if (maTrinhDo == "G001") exSheet.Range["D" + (dong + i).ToString()].Value = "Xuất Sắc";
 				else if (maTrinhDo == "G002") exSheet.Range["D" + (dong + i).ToString()].Value = "Giỏi";
 				else if (maTrinhDo == "K001") exSheet.Range["D" + (dong + i).ToString()].Value = "Khá";
@@ -493,5 +521,5 @@ namespace TestBaiTapLonWinform2
 				label9.Parent.Controls.Add(label9);
 			}
 		}
-	}
+    }
 }
