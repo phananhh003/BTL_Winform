@@ -207,64 +207,15 @@ namespace TestBaiTapLonWinform2
 
 		private void cmbthang_SelectedIndexChanged_1(object sender, EventArgs e)
 		{
-			switch (cmbthang.SelectedItem.ToString())
-			{
-				case "1":
-					loadData3(1);
-					break;
-				case "2":
-					loadData3(2);
-					break;
-				case "3":
-					loadData3(3);
-					break;
-				case "4":
-					loadData3(4);
-					break;
-				case "5":
-					loadData3(5);
-					break;
-				case "6":
-					loadData3(6);
-					break;
-				case "7":
-					loadData3(7);
-					break;
-				case "8":
-					loadData3(8);
-					break;
-				case "9":
-					loadData3(9);
-					break;
-				case "10":
-					loadData3(10);
-					break;
-				case "11":
-					loadData3(11);
-					break;
-				case "12":
-					loadData3(12);
-					break;
-			}
+			int n = int.Parse(cmbthang.SelectedItem.ToString());
+			loadData3(n);
+
 		}
 
 		private void cmbquy_SelectedIndexChanged_1(object sender, EventArgs e)
 		{
-			switch (cmbquy.SelectedItem.ToString())
-			{
-				case "1":
-					loadData4(1);
-					break;
-				case "2":
-					loadData4(2);
-					break;
-				case "3":
-					loadData4(3);
-					break;
-				case "4":
-					loadData4(4);
-					break;
-			}
+			int n = int.Parse(cmbquy.SelectedItem.ToString());
+			loadData4(n);
 		}
 
 		private void txtnam_KeyPress_1(object sender, KeyPressEventArgs e)
